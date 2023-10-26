@@ -1,0 +1,494 @@
+.calculator{
+    width: 881px;
+    height: 879px;
+    background-color: white;
+    border-radius: 16px !important;
+    padding: 43px 81px 66px 88px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    color: #0F1629;
+    text-align: center;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px; /* 116.667% */
+}
+
+.yearAndCountry{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.purchaseAndSale{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.ExpenseAndType{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.year{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+}
+
+.purchase{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+}
+
+.year > p{
+    color:  #0F1629;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 160% */
+}
+
+.purchase > p{
+    color:  #0F1629;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 160% */
+}
+
+.country{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+}
+
+.sale{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.country > p{
+    color:  #0F1629;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 160% */
+}
+
+.sale > p{
+    color:  #0F1629;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 160% */
+}
+
+
+.line{
+    border-bottom: 1px solid rgba(201, 207, 221, 0.60);
+    width: 100%;
+    margin-top: 28px;
+}
+
+/* -0------------ */
+
+
+.dropdown {
+   flex: 1;
+    border-radius: 10px;
+    background-color: #EFF2F5;
+    position: relative;
+  }
+  
+  .dropdownHeader {
+    padding: 17px 11px 17px 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--gray-1, #0F1629);
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+background-color: #EFF2F5;
+line-height: normal;
+  
+border-radius: 8px;
+  }
+  
+  .dropdownBody {
+    padding: 5px 0px 5px 0px;
+    border-top: 1px solid #E5E8EC;
+    display: none;
+    position: absolute;
+    z-index: 999999;
+    background-color: #EFF2F5;
+    flex: 1;
+    font-family: Inter;
+    border-bottom-left-radius: 10px; /* Adjust the radius value as needed */
+  border-bottom-right-radius: 10px; /* Adjust the radius value as needed */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+    width: 100%;
+  margin-top: 5px;
+}
+.selectedCountryDiv{
+    display: flex;
+    gap: 6px;
+}
+  
+  .dropdownBody.open {
+    display: block;
+  }
+  
+  .countryDropdownItem{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dropdownItem {
+    padding: 10px;
+  }
+  
+  .dropdownItem:hover {
+    cursor: pointer;
+  }
+  
+  .dropdownItemDot {
+    opacity: 0;
+    color: #91A5BE;
+    transition: all .2s ease-in-out;
+  }
+  
+  .dropdownItemDot.selected {
+    opacity: 1;
+  }
+  
+  .icon {
+    font-size: 13px;
+    color: #91A5BE;
+    transform: rotate(0deg);
+    transition: all .2s ease-in-out;
+  }
+  
+  .icon.open {
+    transform: rotate(180deg);
+  }
+
+  .inputBar{
+    display: flex;
+padding: 17px 16px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
+border-radius: 8px;
+background: #EFF2F5;
+outline: none;
+border: none;
+
+color: var(--gray-1, #0F1629);
+text-align: left;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+
+  .inputBar::placeholder {
+    color: #999; /* Style for the placeholder text color */
+  }
+
+  .investmentTypeBtns{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .investmentTypeBtns > button{
+    display: flex;
+height: 56px;
+padding: 24px 12px;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 0;
+align-self: stretch;
+flex: 1;
+
+color: var(--gray-2, #3E424A);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+border-radius: 8px;
+border: 1px solid var(--gray-2, #3E424A);
+background: rgba(0, 82, 254, 0.00);
+  }
+
+    .selectedBtn {
+        border-radius: 8px;
+border: 2px solid var(--primary-blue, #0052FE) !important;
+background: rgba(0, 82, 254, 0.06) !important;
+color:  #0141CF !important;
+      }
+
+      .months{
+        display: flex;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .months > p{
+       flex: 1;
+       color: var(--gray-2, #3E424A);
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 160% */
+      }
+  
+      .annualIncome{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .annualIncome > p{
+        color: var(--gray-1, #0F1629);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+      }
+
+      .annualIncomeDiv{
+        width: 100%;
+        display: flex;
+        gap: 40px;
+        margin-top: 28px;
+        align-items: flex-end;
+      }
+
+      .taxRateDiv{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 58px;
+      }
+
+      .taxRateDiv > p{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .taxRateHeading{
+        color: var(--gray-2, #3E424A);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+margin: 0;
+padding: 0;
+height: 24px;
+      }
+
+      .taxRate{
+        color: var(--gray-2, #3E424A);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+height: 25px;
+      }
+
+
+      .gainAndDiscountDiv{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 28px;
+        gap: 40px;
+      }
+
+      .gainAndDiscountDiv > p{
+        color: var(--gray-1, #0F1629);
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 160% */
+      }
+      .gainDiv{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .discountDiv{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .gainBox{
+        display: flex;
+        padding: 17px 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+border-radius: 8px;
+background: #EFF2F5;
+      }
+
+      .gainBox > p{
+        color: var(--gray-1, #0F1629);
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+      }
+
+      .discountBox > p{
+        color: var(--gray-1, #0F1629);
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+      }
+      .discountBox{
+        display: flex;
+        padding: 17px 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+border-radius: 8px;
+background: #EFF2F5;
+      }
+
+      .gainDiv > p{
+        color: var(--gray-1, #0F1629);
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 160% */
+      }
+
+      .discountDiv > p{
+        color: var(--gray-1, #0F1629);
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 160% */
+      }
+
+      .netCapitalAndtax{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 28px;
+        gap: 40px;
+      }
+      .netCapitalBox{
+        border-radius: 8px;
+background: #EBF9F4;
+display: flex;
+height: 97px;
+padding: 8px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex: 1 0 0;
+      }
+
+      .taxToPayBox{
+        border-radius: 8px;
+        background: #EBF2FF;
+        display: flex;
+height: 97px;
+padding: 8px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex: 1 0 0;
+      }
+      .netCapitalAndtaxHeading{
+        color: var(--gray-1, #0F1629);
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+      }
+
+      .netCapitalAmt{
+        color: var(--text-green-1, #0FBA83);
+text-align: center;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+      }
+
+      .taxToPayAmt{
+        color: var(--primary-dark-blue, #0141CF);
+text-align: center;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+      }
