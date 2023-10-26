@@ -1,0 +1,57 @@
+.card{
+    display: flex;
+width: 426px;
+height: fit-content;
+padding: 55px 16px;
+flex-direction: column;
+flex-shrink: 0;
+align-items: center;
+border-radius: 8px;
+background: var(--primary-blue, #0052FE);
+}
+
+.card> h1{
+    color: #FFF;
+text-align: center;
+font-feature-settings: 'liga' off;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 40px; /* 166.667% */
+}
+
+.card > p{
+    color: #F2F2F2;
+text-align: center;
+font-feature-settings: 'liga' off;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+margin-top: 14px;
+}
+.img{
+    margin-top: 55px;
+}
+
+.btn{
+    margin-top: 35px;
+    display: inline-flex;
+padding: 8px 24px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 6px;
+
+border-radius: 8px;
+background: #FFF;
+
+color: var(--gray-1, #0F1629);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 175% */
+}
