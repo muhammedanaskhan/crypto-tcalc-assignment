@@ -1,6 +1,10 @@
 .main{
     display: flex;
     flex-direction: column;
+
+    padding-left: 56px;
+    padding-right: 57px;
+    padding-top: 28px;
 }
 
 .calculatorAndCard{

@@ -1,0 +1,60 @@
+.nav{
+
+    z-index: 999999999;
+
+    display: flex;
+    padding-left: 60px;
+    padding-right: 56px;
+    background-color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signInBtn{
+    display: flex;
+width: 112px;
+height: 40px;
+padding: 8px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+
+border-radius: 4px;
+border: 1px solid #0052FE;
+background: #FFFFFF;
+
+color: var(--primary-blue, #0052FE);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.16px;
+}
+
+.btnsDiv{
+    display: flex;
+    gap: 68.85px;
+}
+.routes{
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+.route{
+    text-decoration: none;
+    color: var(--gray-1, #0F1629);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.16px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
