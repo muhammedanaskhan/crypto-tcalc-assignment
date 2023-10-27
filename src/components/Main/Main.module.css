@@ -1,14 +1,15 @@
 .main{
     display: flex;
-    flex-direction: column;
-
     padding-left: 56px;
     padding-right: 57px;
     padding-top: 28px;
+    justify-content: center;
 }
 
 .calculatorAndCard{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    justify-content: center;
+    max-width: 1327px;
 }

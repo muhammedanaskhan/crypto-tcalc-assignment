@@ -250,14 +250,14 @@ function Calculator() {
           <div className={styles.annualIncomeDiv}>
               <div className={styles.annualIncome}>
                   <p>Select Your Annual Income</p>
-                  <div className={styles.dropdown}>
+                  <div className={styles.incomeDropdown}>
                       <div className={styles.dropdownHeader} onClick={toggleIncomeDropdown}>
                           {selectedIncome ? incomeItems.find(item => item.id == selectedIncome).label : "Select Income"}
                           <i className={`fa fa-chevron-right ${styles.icon} ${isYearOpen && styles.open}`}>
                               <Image src={arrow} width={8} height={5} />
                           </i>
                       </div>
-                      <div className={`${styles.dropdownBody} ${isIncomeOpen && styles.open}`}>
+                      <div className={`${styles.incomeDropdownBody} ${isIncomeOpen && styles.open}`}>
                           {incomeItems.map(item => (
                               <div className={styles.dropdownItem} onClick={e => handleIncomeClick(e.target.id)} id={item.id}>
                                   <span className={`${styles.dropdownItemDot} ${item.id == selectedIncome && styles.selected}`}>• </span>
@@ -269,6 +269,7 @@ function Calculator() {
               </div>
               <div className={styles.taxRateDiv}>
                     <p className={styles.taxRateHeading}>Tax Rate</p>
+                    <p className={styles.taxRateHeadingMobile}>Tax Rate:</p>
                     <p className={styles.taxRate}>{getTaxRate()}</p>
               </div>
           </div>

@@ -55,3 +55,10 @@ font-style: normal;
 font-weight: 600;
 line-height: 28px; /* 175% */
 }
+
+@media screen and (max-width: 1338px){
+ 
+    .card{
+        display: none;
+    }
+}

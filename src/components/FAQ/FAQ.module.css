@@ -1,0 +1,43 @@
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.FAQsSection{
+width: 1327px !important;
+ margin-top: 20px;
+ display: flex;
+    justify-content: flex-start;
+}
+
+.FAQs{
+    width: 849px;
+}
+
+@media screen and (max-width: 1338px){
+ 
+    .FAQsSection{
+        width: 882px !important;
+        justify-content: flex-start;
+    }
+
+    .FAQs{
+        width: 882px;
+    }
+}
+
+@media screen and (max-width: 912px){
+ 
+    .FAQsSection{
+        width: 100% !important;
+        padding-left: 50px;
+        padding-right: 50px;
+        justify-content: center;
+    }
+
+    .FAQs{
+        width: 100%;
+        max-width: 670px;
+    }
+}
