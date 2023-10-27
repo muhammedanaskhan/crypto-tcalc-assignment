@@ -3,6 +3,7 @@ import styles from './Calculator.module.css'
 import arrow from '@/assets/images/drop-arrow.svg'
 import Image from 'next/image';
 import australia from '@/assets/images/australia.svg';
+import blueTick from '@/assets/images/blueTick.svg';
 
 function Calculator() {
 
@@ -139,7 +140,7 @@ function Calculator() {
               }
         }
 
-        console.log(calculateTaxToPay());
+        console.log(investmentType);
 
   return (
     <div className={styles.calculator}>
@@ -195,35 +196,45 @@ function Calculator() {
           <div className={styles.purchaseAndSale}>
               <div className={styles.purchase}>
                   <p>Enter purchase price of Crypto</p>
-                  <input
-                      className={styles.inputBar}
-                      type="text"
-                      value={purchaseValue}
-                      onChange={handlePurchaseChange}
-                      placeholder="Enter purchase price..."
-                  />
+                  <div className={styles.inputContainerBar}>
+                      <span className={styles.dollarSign}>$</span>
+                      <input
+                          className={styles.inputBar}
+                          type="number"
+                          value={purchaseValue}
+                          onChange={handlePurchaseChange}
+                          placeholder="Enter Purchase price..."
+                      />
+                  </div>
               </div>
               <div className={styles.sale}>
                   <p>Enter sale price of Crypto</p>
-                  <input
-                      className={styles.inputBar}
-                      type="text"
-                      value={saleValue}
-                      onChange={handleSaleChange}
-                      placeholder="Enter sale price..."
-                  />
+                  <div className={styles.inputContainerBar}>
+                      <span className={styles.dollarSign}>$</span>
+                      <input
+                          className={styles.inputBar}
+                          type="number"
+                          value={saleValue}
+                          onChange={handleSaleChange}
+                          placeholder="Enter sale price..."
+                      />
+                  </div>
+
               </div>
           </div>
           <div className={styles.ExpenseAndType}>
               <div className={styles.purchase}>
                   <p>Enter your Expenses</p>
-                  <input
-                      className={styles.inputBar}
-                      type="text"
-                      value={expensesValue}
-                      onChange={handleExpensesChange}
-                      placeholder="Enter expenses..."
-                  />
+                  <div className={styles.inputContainerBar}>
+                      <span className={styles.dollarSign}>$</span>
+                      <input
+                          className={styles.inputBar}
+                          type="number"
+                          value={expensesValue}
+                          onChange={handleExpensesChange}
+                          placeholder="Enter Expense price..."
+                      />
+                  </div>
               </div>
               <div className={styles.sale}>
                   <p>Investment Type</p>
@@ -233,17 +244,23 @@ function Calculator() {
                           className={investmentType === 1 ? styles.selectedBtn : ''}
                       >
                           Short Term
+                          {investmentType === 1 && (
+                              <Image className={styles.blueTick} src={blueTick} width={32} height={32} alt='blue tick' />
+                          )}
                       </button>
                       <button
                           onClick={() => handleInvestmentTypeSelect(2)}
                           className={investmentType === 2 ? styles.selectedBtn : ''}
                       >
                           Long Term
+                          {investmentType === 2 && (
+                              <Image className={styles.blueTick} src={blueTick} width={32} height={32} alt='blue tick' />
+                          )}
                       </button>
                   </div>
                   <div className={styles.months}>
-                        <p>&lt; 12 months</p>
-                        <p>&gt; 12 months</p>
+                      <p>&lt; 12 months</p>
+                      <p>&gt; 12 months</p>
                   </div>
               </div>
           </div>

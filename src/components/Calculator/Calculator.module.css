@@ -191,6 +191,9 @@ margin-top: 5px;
     display: block;
   }
   
+  .incomeDropdownBody.open {
+    display: block;
+  }
   .countryDropdownItem{
     padding: 10px;
     display: flex;
@@ -226,11 +229,11 @@ margin-top: 5px;
     transform: rotate(180deg);
   }
 
-  .inputBar{
+  .inputContainerBar{
     display: flex;
 padding: 17px 16px;
-flex-direction: column;
-justify-content: center;
+flex-direction: row;
+justify-content: flex-start;
 align-items: flex-start;
 gap: 8px;
 align-self: stretch;
@@ -248,6 +251,19 @@ font-weight: 500;
 line-height: normal;
   }
 
+  .inputBar{
+    background: transparent;
+    border: none;
+color: var(--gray-1, #0F1629);
+text-align: left;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+outline: none;
+  }
+
   .inputBar::placeholder {
     color: #999; /* Style for the placeholder text color */
   }
@@ -260,6 +276,8 @@ line-height: normal;
     justify-content: space-between;
   }
   .investmentTypeBtns > button{
+
+    position: relative;
     display: flex;
 height: 56px;
 padding: 24px 12px;
@@ -281,6 +299,12 @@ border: 1px solid var(--gray-2, #3E424A);
 background: rgba(0, 82, 254, 0.00);
   }
 
+
+  .blueTick{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+  }
     .selectedBtn {
         border-radius: 8px;
 border: 2px solid var(--primary-blue, #0052FE) !important;
@@ -530,6 +554,10 @@ line-height: normal;
         .calculator{
           width: 100%;
           padding: 17px !important;
+
+          border-radius: 12px;
+border: 1px solid #DEE1E6;
+background: #FFF;
         }
         .purchaseAndSale{
           flex-direction: column;
@@ -624,6 +652,16 @@ line-height: normal;
           max-width: 292px !important;
           height: 97px !important;
         }
+
+        
+      .gainAndDiscountDiv{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        gap: 21px;
+      }
 
         .taxToPayBox{
           border-radius: 8px;

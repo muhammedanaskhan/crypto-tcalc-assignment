@@ -12,6 +12,7 @@
     justify-content: space-between;
 }
 
+
 .signInBtn{
     display: flex;
 width: 112px;
@@ -57,4 +58,36 @@ display: flex;
 justify-content: center;
 align-items: center;
 
+}
+
+.ham{
+    display: none;
+}
+
+@media screen and (max-width: 912px){
+ 
+    .btnsDiv{
+        display: none;
+    }
+
+    .ham{
+        display: flex;
+    }
+
+    .nav{
+
+        z-index: 999999999;
+    
+        display: flex;
+        padding-left: 24px;
+        padding-right: 24px;
+        background-color: #FFFFFF;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        align-items: center;
+        justify-content: space-between;
+
+        background: #FFF;
+box-shadow: 0px 1px 8px 0px rgba(19, 40, 56, 0.08);
+    }
 }

@@ -115,6 +115,14 @@
     transform: translateX(4px);
   }
 }
+@media screen and (max-width: 912px){
+    
+  .main {
+    background-color: white;
+    min-height: 100vh;
+  
+  }
+}
 
 @media (prefers-reduced-motion) {
   .card:hover span {
